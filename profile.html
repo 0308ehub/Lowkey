@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Homepage</title>
+    <!-- Add Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  
+    <script>
+      // Initialize Firebase with your project's config
+      var firebaseConfig = {
+        apiKey: "AIzaSyCxVVcoDCf1xUAkijjE-SJ0sT6gIPlm0y8",
+        authDomain: "lowkey-365f7.firebaseapp.com",
+        projectId: "lowkey-365f7",
+        storageBucket: "lowkey-365f7.appspot.com",
+        messagingSenderId: "1035139135538",
+        appId: "1:1035139135538:web:e400ee2968b508fa7a642b",
+        measurementId: "G-MX66ZYGEKX"
+      };
+      firebase.initializeApp(firebaseConfig);
+  
+      // Function to check if a user is logged in or not
+      function checkAuthState() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (!user) {
+            // User is not signed in, redirect to the login page
+            window.location.href = "index.html";
+          }
+        });
+      }
+    </script>
+  </head>
+  <body onload="checkAuthState()">
+</head>
