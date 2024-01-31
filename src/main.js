@@ -8,7 +8,7 @@ var firebaseConfig = {
     measurementId: "G-MX66ZYGEKX"
 };
 const auth =firebase.auth();
-const database = firebase.database();
+var database_ref = firebase.database().ref();
 
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
@@ -48,19 +48,33 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const email = document.getElementById("signupEmail").value
         const password = document.getElementById("signupPassword").value
-
+        const username = document.getElementById("signupUsername").value
+        if (e.target.id === "confirmPassword" && e.target.value !== document.getElementById("signupPassword").value) {
+            setInputError(e.target, "Passwords do not match");
+            return;
+        }
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 // Signed in 
                 var user = userCredential.user;
-                database_ref.child('users/' +user.uid).set(user_data);
 
+                database_ref.child('users/' + user.uid).set({
+                    username : username,
+                    email : email,
+                    password: password
+                })
                 // ...
             })
             .catch((error) => {
-                setFormMessage(createAccountForm, "error", "Invalid email address");
                 var errorCode = error.code;
                 var errorMessage = error.message;
+                if (errorCode === 'auth/invalid-email') {
+                    // Display the "Invalid email address" message only for invalid email errors
+                    setFormMessage(createAccountForm, "error", "Invalid email address");
+                }
+                if (errorCode === 'auth/email-already-in-use') {
+                    setFormMessage(createAccountForm, "error", "The email address is already in use by another account");
+                }
                 console.log("Create Account error:", errorCode, errorMessage);
             });
     });
