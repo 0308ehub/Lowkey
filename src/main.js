@@ -6,11 +6,9 @@ var firebaseConfig = {
     messagingSenderId: "1035139135538",
     appId: "1:1035139135538:web:e400ee2968b508fa7a642b",
     measurementId: "G-MX66ZYGEKX"
-  };
-  
-  // Initialize Firebase
-  const auth = firebase.auth()
-  const database = firebase.database()
+};
+const auth =firebase.auth();
+const database = firebase.database();
 
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
@@ -29,51 +27,6 @@ function clearInputError(inputElement) {
     inputElement.classList.remove("form__input--error");
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
-function register(){
-    signupEmail = document.getElementById('signupEmail').value;
-    signupPassword = document.getElementById('signupPassword').value;
-
-    if (validate_email(singupEmail) == false || validate_password(signupPassword) == false){
-        return;
-    }
-
-    auth.createUserWithEmailAndPassword(signupEmail, signupPassword)
-    .then(function() {
-        var user = auth.currentUser;
-        var database_ref = database.ref();
-        var user_data = {
-            singupEmail : signupEmail,
-            last_login : Date.now()
-        };
-
-        database_ref.child('users/' +user.uid).set(user_data);
-
-        alert('User Created');
-    })
-    .catch(function(error) {
-        var error_message = error.message;
-
-        alert(error_message);
-    })
-}
-
-function validate_email(signupEmail) {
-    expression = /^[^@]+@\w+(\.\w+)+\w$/.test(signupEmail)
-    if (expression.test(signupEmail) == true) {
-        return true
-    } else {
-        return false
-    }
-}
-
-function validate_password(signupPassword) {
-    if (signupPassword < 6) {
-        return false
-    } else {
-        return true
-    }
-}
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
@@ -91,7 +44,26 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add("form--hidden");
 
     });
-    
+    createAccountForm.addEventListener("submit", e => {
+        e.preventDefault();
+        const email = document.getElementById("signupEmail").value
+        const password = document.getElementById("signupPassword").value
+
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                // Signed in 
+                var user = userCredential.user;
+                database_ref.child('users/' +user.uid).set(user_data);
+
+                // ...
+            })
+            .catch((error) => {
+                setFormMessage(createAccountForm, "error", "Invalid email address");
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log("Create Account error:", errorCode, errorMessage);
+            });
+    });
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
         const email = document.getElementById("email").value;
@@ -120,6 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.target.id === "signupUsername" && e.target.value.length > 25) {
                 setInputError(inputElement, "Username can't be greater than 25 characters in length");
                 
+            }
+            if (e.target.id === "signupPassword" && e.target.value.length > 0 && e.target.value.length < 6) {
+                setInputError(inputElement, "Password must be at least 6 characters in length");
+            
+            }
+            if (e.target.id === "confirmPassword" && e.target.value !== document.getElementById("signupPassword").value) {
+                setInputError(inputElement, "Passwords do not match");
             }
         });
 

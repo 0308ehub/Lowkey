@@ -3,13 +3,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Login / Sign Up Form</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/main.css">
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
     <script>
         // Initialize Firebase with your project's config
@@ -37,24 +36,6 @@
             }
         });
         }
-
-        // Function to handle the login form submission
-        function login() {
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
-
-        firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(function() {
-            // Login successful, redirect to the homepage
-            window.location.href = "homepage.html";
-            })
-            .catch(function(error) {
-            // Handle errors here
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log("Login error:", errorCode, errorMessage);
-            });
-        }
     </script>
 </head>
 <body onload="checkAuthState()">
@@ -63,11 +44,11 @@
             <h1 class="form__title">Login</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
-                <input type="text" id="email" class="form__input" autofocus placeholder="Email">
+                <input type="text" id="email" class="form__input" autofocus placeholder="Email" required>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" id="password" class="form__input" autofocus placeholder="Password">
+                <input type="password" id="password" class="form__input" autofocus placeholder="Password" required>
                 <div class="form__input-error-message"></div>
             </div>
             <button class="form__button" type="submit" onclick="login()">Continue</button>
@@ -82,22 +63,22 @@
             <h1 class="form__title">Create Account</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
-                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username" required>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" class="form__input" id="singupEmail" autofocus placeholder="Email Address">
+                <input type="text" class="form__input" id="signupEmail" autofocus placeholder="Email Address" required>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" id="signupPassword" autofocus placeholder="Password">
+                <input type="password" class="form__input" id="signupPassword" autofocus placeholder="Password" required>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                <input type="password" class="form__input" id="confirmPassword" autofocus placeholder="Confirm password" required>
                 <div class="form__input-error-message"></div>
             </div>
-            <button class="form__button" type="submit" onclick="register()">Continue</button>
+            <button class="form__button" type="submit" onclick="register()" id="submit">Continue</button>
             <p class="form__text">
                 <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
             </p>
