@@ -23,8 +23,7 @@ body {
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
-    background: #ffffff;
-
+    background: rgba(255, 255, 255, 0);
 }
 .container,
 .form__input,
@@ -46,11 +45,17 @@ body {
 
 .form__title {
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: left;
+    color: #ffffff;
+}
+
+.form__motto {
+    font-size: 12px;
+    color: #ffffff;
 }
 
 .form__message {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1rem;
 }
 
@@ -101,10 +106,11 @@ body {
     font-size: 1.1rem;
     color: #ffffff;
     border: none;
-    border-radius: var(--border-radius);
     outline: none;
     cursor: pointer;
-    background: var(--color-primary);
+    background: #6A429D;
+    scale: .9;
+    font: 200 1rem 'Inter', sans-serif;
 }
 
 .form__button:hover {
@@ -116,15 +122,52 @@ body {
 }
 
 .form__text {
-    text-align: center;
+    text-align: left;
 }
 
 .form__link {
-    color: var(--color-secondary);
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
+    font: 200 1rem 'Inter', sans-serif;
+    font-size: 14px;
 }
 
 .form__link:hover {
     text-decoration: underline;
+}
+
+.bottom__links {
+    position: absolute;
+    text-align: center;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom__links a {
+    color: #ffffff;
+    padding: 0 10px; /* Adjust the padding as needed */
+    margin: 0 5px; /* Add margin to separate links */
+    text-decoration: none; /* Remove underline if needed */
+    font: 500 1rem 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+.bottom__links a:hover {
+    text-decoration: underline;
+}
+
+.footer { 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+    text-align: center;
+}
+
+.image__logo {
+    margin-right: 75px;
+    margin-left: -350px;
+    display: block;
+    scale: .75;
 }
