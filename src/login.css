@@ -1,3 +1,4 @@
+
 body {
     --color-primary: #1e0044;
     --color-primary-dark: #034f41;
@@ -5,7 +6,7 @@ body {
     --color-error: #cc3333;
     --color-success: #4bb544;
     --border-radius: 4px;
-    
+    position: relative;
     margin: 0;
     height: 100vh;
     display: flex;
@@ -13,7 +14,6 @@ body {
     justify-content: center;
     font-size: 18px;
     background: var(--color-primary)
-
 }
 
 .container {
@@ -21,8 +21,6 @@ body {
     max-width: 400px;
     margin: 1rem;
     padding: 2rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
     background: rgba(255, 255, 255, 0);
 }
 .container,
@@ -44,14 +42,15 @@ body {
 }
 
 .form__title {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: left;
     color: #ffffff;
 }
 
 .form__motto {
-    font-size: 12px;
+    font-size: 13px;
     color: #ffffff;
+    margin-bottom: 1.2rem;
 }
 
 .form__message {
@@ -72,20 +71,21 @@ body {
 }
 
 .form__input {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    box-sizing: border-box;
-    border-radius: var(--border-radius);
-    border: 1px solid #dddddd;
+    width: 85%;
+    padding: 10px 0;
     outline: none;
-    background: #eeeeee;
-    transition: background .2s, border-color 0.2s;
+    background: transparent;
+    font: 200 1rem 'Inter', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;  
+    transition: .03s ease;
 }
 
-.form__input:focus {
-    border-color: var(--color-primary);
-    background: #ffffff;
+.form__input::placeholder {
+    color: white; 
+    position: relative;
 }
 
 .form__input--error {
@@ -100,7 +100,7 @@ body {
 }
 
 .form__button {
-    width: 100%;
+    width: 85%;
     padding: 1rem 2rem;
     font-weight: bold;
     font-size: 1.1rem;
@@ -111,6 +111,8 @@ body {
     background: #6A429D;
     scale: .9;
     font: 200 1rem 'Inter', sans-serif;
+    position: relative;
+    right: 20px;
 }
 
 .form__button:hover {
@@ -125,7 +127,7 @@ body {
     text-align: left;
 }
 
-.form__link {
+.form__link1 {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
@@ -133,7 +135,35 @@ body {
     font-size: 14px;
 }
 
-.form__link:hover {
+.form__link2 {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    font: 200 1rem 'Inter', sans-serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 10px;
+}
+
+.form__link3 {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    font: 200 1rem 'Inter', sans-serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 10px;
+}
+
+.form__link1:hover {
+    text-decoration: underline;
+}
+
+.form__link2:hover {
+    text-decoration: underline;
+}
+
+.form__link3:hover {
     text-decoration: underline;
 }
 
