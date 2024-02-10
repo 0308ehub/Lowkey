@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>Profile</title>
     <!-- Add Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
   
-    <script>
+    <!-- <script>
       // Initialize Firebase with your project's config
       var firebaseConfig = {
         apiKey: "AIzaSyCxVVcoDCf1xUAkijjE-SJ0sT6gIPlm0y8",
@@ -26,8 +32,19 @@
             window.location.href = "index.html";
           }
         });
-      }
+      } -->
     </script>
   </head>
-  <body onload="checkAuthState()">
+    <body onload="checkAuthState()">
+        <nav class="sidebar">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo.png" alt="logo">
+                </div>
+            </header>
+
+        </nav>
+    </body>
+</html>
 </head>
