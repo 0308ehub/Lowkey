@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="./src/profile.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Profile</title>
     <!-- Add Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
   
-    <!-- <script>
+    <script>
       // Initialize Firebase with your project's config
       var firebaseConfig = {
         apiKey: "AIzaSyCxVVcoDCf1xUAkijjE-SJ0sT6gIPlm0y8",
@@ -29,22 +30,142 @@
         firebase.auth().onAuthStateChanged(function(user) {
           if (!user) {
             // User is not signed in, redirect to the login page
-            window.location.href = "index.html";
+            window.location.href = "login.html";
           }
         });
-      } -->
+      }
     </script>
   </head>
     <body onload="checkAuthState()">
-        <nav class="sidebar">
+        <nav class="sidebar close">
             <header>
                 <div class="image-text">
                     <span class="image">
                         <img src="logo.png" alt="logo">
+                    </span>
+                    <div class="text header-text">
+                        <span class="name">Lowkey</span>
+                        <span class="vision">Your community</span>
+                    </div>
                 </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
             </header>
 
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class='bx bx-search icon' ></i>                            
+                            <input type="text" placeholder="Search...">
+                    </li>
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-time-five icon' ></i>
+                                <span class="text nav-text">Recent</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bxs-group icon' ></i>
+                                <span class="text nav-text">Friends</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-message-rounded icon' ></i>
+                                <span class="text nav-text">Messages</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-globe icon' ></i>
+                                <span class="text nav-text">Communities</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-content">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-moon icon moon' ></i>
+                            <i class='bx bx-sun icon sun' ></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
         </nav>
+        <nav class="navbar">
+            <div class="navdiv">
+                <ul>
+                    <li class="nav-link">
+                        <a href="#" class="tab active" id="posts-tab">
+                            <span class="text nav-text">Posts</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" class="tab" id="comments-tab">
+                            <span class="text nav-text">Comments</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" class="tab" id="communities-tab">
+                            <span class="text nav-text">Communities</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" class="tab" id="status-tab">
+                            <span class="text nav-text">Status</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="tab-texts">
+            <span class="tab-text active" data-tab="posts">View Posts</span>
+            <span class="tab-text" data-tab="comments">View Comments</span>
+            <span class="tab-text" data-tab="communities">Explore Communities</span>
+            <span class="tab-text" data-tab="status">Check Status</span>
+        </div>
+        <div class="top-section">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <label for="imageUpload" class="file-upload-btn">Choose your banner</label>
+            <i class='bx bx-edit-alt icon hidden'></i>        
+        </div>
+        <div class="container1">
+            <div class="profile-picture">
+                <input type="file" id="profile-image-upload" accept="image/*" style="display: none;">
+                <i class='bx bxs-user-circle icon' id="profile-image-icon"></i>
+            </div>
+            <h1 class="occupation">Student @ Harvard</h1>
+            <h1 class="location">Woodbury, MN</h1>
+        </div>
+        <div class="container2">
+            <h1 class="usercommunities">User's Communities</h1>
+        </div>
+        <script src="./src/profile.js"></script>
     </body>
 </html>
 </head>
