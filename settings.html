@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/settings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Settings</title>
+    <!-- Add Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  
+    <script>
+      // Initialize Firebase with your project's config
+      var firebaseConfig = {
+        apiKey: "AIzaSyCxVVcoDCf1xUAkijjE-SJ0sT6gIPlm0y8",
+        authDomain: "lowkey-365f7.firebaseapp.com",
+        projectId: "lowkey-365f7",
+        storageBucket: "lowkey-365f7.appspot.com",
+        messagingSenderId: "1035139135538",
+        appId: "1:1035139135538:web:e400ee2968b508fa7a642b",
+        measurementId: "G-MX66ZYGEKX"
+      };
+      firebase.initializeApp(firebaseConfig);
+  
+      // Function to check if a user is logged in or not
+      function checkAuthState() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (!user) {
+            // User is not signed in, redirect to the login page
+            window.location.href = "login.html";
+          }
+        });
+      }
+    </script>
+</head>
+<body onload="checkAuthState()">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <img src="./images/logo.png" alt="logo">
+            </span>
+            <div class="text header-text">
+                <span class="name">Lowkey</span>
+                <span class="vision">Your community</span>
+            </div>
+        </div>
+    </header>
+    <div class="text header-text">
+                <span class="name">User Settings</span>
+    </div>
+    <nav class="navbar">
+        <div class="navdiv">
+            <ul>
+                <li class="nav-link">
+                    <a href="#" class="tab active" id="posts-tab">
+                        <span class="text nav-text">Posts</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="tab" id="comments-tab">
+                        <span class="text nav-text">Comments</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="tab" id="communities-tab">
+                        <span class="text nav-text">Communities</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="tab" id="status-tab">
+                        <span class="text nav-text">Status</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="tab-texts">
+        <span class="tab-text active" data-tab="posts">View Posts</span>
+        <span class="tab-text" data-tab="comments">View Comments</span>
+        <span class="tab-text" data-tab="communities">Explore Communities</span>
+        <span class="tab-text" data-tab="status">Check Status</span>
+    </div>
+    <script src="./src/settings.js"></script>
+</body>

@@ -1,0 +1,120 @@
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color: #1e0044;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #DDD;
+    --text-color: 707070; 
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+
+}
+
+body{
+    height: 100vh;
+    background: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+.image{
+    scale: 4.5;
+    position: relative;
+    right: 6px;
+    bottom: 5px;
+}
+
+header .text header-text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+    
+
+.navbar{
+    position: relative;
+    left: 250px;
+    top: 150px;
+    height: 30px;
+    width: 50%;
+    background: var(--primary-color);
+    transition: var(--tran-05);
+    text-decoration: none;
+    padding-right: 15px;
+    padding-left: 80px;
+    padding-bottom: 60px;
+}
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar li{
+    list-style: none;
+    display: inline-block;
+    padding-top: 25px;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 25px;
+    transition: var(--tran-02);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navbar li a:hover{
+    border-bottom: 5px solid #CCC;
+    padding-bottom: 4px;
+}
+
+.navbar li a.active{
+    border-bottom: 5px solid #CCC;
+    padding-bottom: 4px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-texts {
+    position: relative;
+    top: 175px; /* Adjust the distance from the navbar */
+    left: 150px;
+    transition: var(--tran-05);
+}
+
+body.dark .tab-text{
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.tab-text {
+    display: none; /* Initially hide the text */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #1e0044;
+    font-size: 16px;
+}
+
+.tab-text.active {
+    display: inline-block; /* Show the text when associated tab is active */
+}
