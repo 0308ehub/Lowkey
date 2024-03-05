@@ -42,7 +42,7 @@ body.dark{
 }
 
 body.dark .image {
-    filter: brightness(0) invert(1);
+    filter: invert(100%);
 }
 
 .sidebar{

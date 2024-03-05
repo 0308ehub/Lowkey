@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lowkey Homepage</title>
   <link rel="stylesheet" href="./src/homepage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <!-- Add Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
@@ -27,7 +30,7 @@
       firebase.auth().onAuthStateChanged(function(user) {
         if (!user) {
           // User is not signed in, redirect to the login page
-          window.location.href = "./html/login.html";
+          window.location.href = "login.html";
         }
       });
     }
@@ -37,28 +40,31 @@
   
   <nav>
     <div class="nav-left">
-      <img src="images/logo3.png" class="logo">
+      <img src="./images/homepage images/logo3.png" class="logo">
       <ul>
-        <li><img src = "images/notification.png"></li>
-        <li><img src = "images/inbox.png"></li>
-        <li><img src = "images/video.png"></li>
+        <li><img src = "./images/homepage images/notification.png"></li>
+        <li><img src = "./images/homepage images/inbox.png"></li>
+        <li><img src = "./images/homepage images/video.png"></li>
       </ul>
 
     </div>
     <div class="nav-right">
-
-      <div class="search-box"></div>
-      <img src="images/search.png">
-      <input type=" text" placeholder ="Search">
+      <li class="search-box">
+        <i class='bx bx-search icon' ></i>                            
+            <input type="text" placeholder="Search...">
+    </li>
     </div>
     <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-      <img src="images/profile2.png">
+      <img src="./images/homepage images/profile2.png">
     </div>
-<!----------------------Settings----------------->
+    <div class="container1">
+      <li class="viewprofile"><a href="profile.html">View Profile</a></li>
+    </div>
+  <!----------------------Settings----------------->
     <div class="settings-menu">
       <div class="settings-menu-inner">
         <div class="user-profile">
-          <img src="images/profile-pic.png">
+          <img src="./images/homepage images/profile-pic.png">
           <div>
             <p>Aurora</p>
             <a href="#">See your Profile</a>
@@ -66,7 +72,7 @@
         </div>
         <hr>
         <div class="user-profile">
-          <img src="images/feedback.png">
+          <img src="./images/homepage images/feedback.png">
           <div>
             <p>Give Feedback</p>
             <a href="#">Help us improve!</a>
@@ -75,32 +81,23 @@
         <hr>
 
         <div class="settings-links">
-          <img src="images/setting.png" class="settings-icon">
-          <a href="#">Settings & Privacy <img src="images/arrow.png" width="10"></a>
+          <img src="./images/homepage images/setting.png" class="settings-icon">
+          <a href="#">Settings & Privacy <img src="./images/homepage images/arrow.png" width="10"></a>
         </div>
         <div class="settings-links">
-          <img src="images/help.png" class="settings-icon">
-          <a href="#">Help & Support <img src="images/arrow.png" width="10"></a>
+          <img src="./images/homepage images/help.png" class="settings-icon">
+          <a href="#">Help & Support <img src="./images/homepage images/arrow.png" width="10"></a>
         </div>
         <div class="settings-links">
-          <img src="images/display.png" class="settings-icon">
-          <a href="#">Display & Accessiblity <img src="images/arrow.png" width="10"></a>
+          <img src="./images/homepage images/display.png" class="settings-icon">
+          <a href="#">Display & Accessiblity <img src="./images/homepage images/arrow.png" width="10"></a>
         </div>
         <div class="settings-links">
-          <img src="images/logout.png" class="settings-icon">
-          <a href="#">Logout <img src="images/arrow.png" width="10"></a>
+          <img src="./images/homepage images/logout.png" class="settings-icon">
+          <a href="#">Logout <img src="./images/homepage images/arrow.png" width="10"></a>
         </div>
-
       </div>
-      
-
-
     </div>
-
-
-
-
-
   </nav>
 
   <div class="container">
@@ -108,19 +105,19 @@
   
     <div class="left-sidebar">
       <div class="imp-links">
-        <a href="#"><img src ="images/news.png"> Latest News</a>
-        <a href="#"><img src ="images/friends.png"> Friends</a>
-        <a href="#"><img src ="images/group.png"> Group</a>
-        <a href="#"><img src ="images/marketplace.png"> Market Place</a>
-        <a href="#"><img src ="images/watch.png"> Watch</a>
+        <a href="#"><img src ="./images/homepage images/news.png"> Latest News</a>
+        <a href="#"><img src ="./images/homepage images/friends.png"> Friends</a>
+        <a href="#"><img src ="./images/homepage images/group.png"> Group</a>
+        <a href="#"><img src ="./images/homepage images/marketplace.png"> Market Place</a>
+        <a href="#"><img src ="./images/homepage images/watch.png"> Watch</a>
         <a href="#">See More</a>
       </div>
       <div class="shortcut-links">
-        <p>Your Comunities</p>
-        <a href="#"><img src="images/shortcut-1.png">East Ridge A2c</a>
-        <a href="#"><img src="images/shortcut-2.png">Woodbury</a>
-        <a href="#"><img src="images/shortcut-3.png">Skiing</a>
-        <a href="#"><img src="images/shortcut-4.png">Salvo Soccer Club</a>
+        <p>Your Communities</p>
+        <a href="#"><img src="./images/homepage images/shortcut-1.png">East Ridge A2c</a>
+        <a href="#"><img src="./images/homepage images/shortcut-2.png">Woodbury</a>
+        <a href="#"><img src="./images/homepage images/shortcut-3.png">Skiing</a>
+        <a href="#"><img src="./images/homepage images/shortcut-4.png">Salvo Soccer Club</a>
       </div>
 
 
@@ -131,30 +128,30 @@
     <div class="main-content">
       <div class="story-gallery">
         <div class="story story1">
-          <img src="images/upload.png">
+          <img src="./images/homepage images/upload.png">
           <p>Post Story</p>
         </div>
         <div class="story story2">
-          <img src="images/member-1.png">
+          <img src="./images/homepage images/member-1.png">
           <p>ironsniper</p>
         </div>
         <div class="story story3">
-          <img src="images/member-2.png">
+          <img src="./images/homepage images/member-2.png">
           <p>erhs</p>
         </div>
         <div class="story story4">
-          <img src="images/member-3.png">
+          <img src="./images/homepage images/member-3.png">
           <p>bro what</p>
         </div>
         <div class="story story5">
-          <img src="images/member-4.png">
+          <img src="./images/homepage images/member-4.png">
           <p>anon</p>
         </div>
       </div>
 
       <div class="write-post-container">
         <div class="user-profile">
-          <img src="images/profile-pic.png">
+          <img src="./images/homepage images/profile-pic.png">
           <div>
             <p>Aurora</p>
             <small>Public <i class="fa-solid fa-caret-down"></i></small>
@@ -165,9 +162,9 @@
           <textarea rows="3" placeholder="What's on your mind?"></textarea> 
 
           <div class="add-post-links">
-            <a href="#"><img src="images/live-video.png"> Live Video</a>
-            <a href="#"><img src="images/photo.png"> Photo/Video</a>
-            <a href="#"><img src="images/feeling.png"> Activity</a>
+            <a href="#"><img src="./images/homepage images/live-video.png"> Live Video</a>
+            <a href="#"><img src="./images/homepage images/photo.png"> Photo/Video</a>
+            <a href="#"><img src="./images/homepage images/feeling.png"> Activity</a>
           </div>
 
         </div>
@@ -177,7 +174,7 @@
       <div class="post-container">
         <div class="post-row">
           <div class="user-profile">
-            <img src="images/profile-pic.png">
+            <img src="./images/homepage images/profile-pic.png">
             <div>
               <p>Aurora</p>
               <span>June 24 2024, 1:41 pm</span>
@@ -187,19 +184,17 @@
         </div>
         
         <p>What is the greatest vacation spot ever? </p>
-        <img src="images/feed-image-3.png" class="post-img">
+        <img src="./images/homepage images/feed-image-3.png" class="post-img">
 
         <div class="post-row">
           <div class="activity-icons">
-            <div><img src="images/like-blue.png"> 120</div>
-            <div><img src="images/comments.png"> 46</div>
-            <div><img src="images/share.png"> 11</div>
+            <div><img src="./images/homepage images/like-blue.png"> 120</div>
+            <div><img src="./images/homepage images/comments.png"> 46</div>
+            <div><img src="./images/homepage images/share.png"> 11</div>
 
           </div>
           <div class="post-profile-icon">
-            <img src="images/profile-pic.png">
-
-
+            <img src="./images/homepage images/profile-pic.png">
           </div>
         </div>
 
@@ -207,7 +202,7 @@
       <div class="post-container">
         <div class="post-row">
           <div class="user-profile">
-            <img src="images/profile-pic.png">
+            <img src="./images/homepage images/profile-pic.png">
             <div>
               <p>broski</p>
               <span>June 24 2024, 1:11 pm</span>
@@ -217,29 +212,20 @@
         </div>
         
         <p>WHello </p>
-        <img src="images/feed-image-4.png" class="post-img">
+        <img src="./images/homepage images/feed-image-4.png" class="post-img">
 
         <div class="post-row">
           <div class="activity-icons">
-            <div><img src="images/like-blue.png"> 120</div>
-            <div><img src="images/comments.png"> 46</div>
-            <div><img src="images/share.png"> 11</div>
+            <div><img src="./images/homepage images/like-blue.png"> 120</div>
+            <div><img src="./images/homepage images/comments.png"> 46</div>
+            <div><img src="./images/homepage images/share.png"> 11</div>
 
           </div>
           <div class="post-profile-icon">
-            <img src="images/profile-pic.png">
-
-
+            <img src="./images/homepage images/profile-pic.png">
           </div>
         </div>
-
       </div>
-
-
-
-
-
-
     </div>
 
        <!----------------------right sidebar----------------->
@@ -276,7 +262,7 @@
         <h4>Advertisement</h4>
         <a href="#">Close</a>
       </div>
-      <img src="images/advertisement.png" class="sidebar-ads">
+      <img src="./images/homepage images/advertisement.png" class="sidebar-ads">
 
 
       <div class="sidebar-title">
@@ -286,35 +272,24 @@
 
       <div class="online-list">
         <div class="online">
-          <img src="images/member-1.png">
+          <img src="./images/homepage images/member-1.png">
         </div>
         <p>aurora</p>
       </div>
       <div class="online-list">
         <div class="online">
-          <img src="images/member-2.png">
+          <img src="./images/homepage images/member-2.png">
         </div>
         <p>mountainowl</p>
       </div>
       <div class="online-list">
         <div class="online">
-          <img src="images/member-3.png">
+          <img src="./images/homepage images/member-3.png">
         </div>
         <p>stealthyfox</p>
       </div>
-
-
-
-
-
-
-
     </div>
-
   </div>
-
-
-
-<script> src="homepage.js"</script>
+<script> src="./src/homepage.js"</script>
 </body>
 </html>

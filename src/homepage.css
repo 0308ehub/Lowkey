@@ -47,17 +47,19 @@ nav {
 }
 
 .search-box{
+    position: relative;
+    right: 100px;
     background: #efefef;
-    width: 350px;
+    width: 500px;
     border-radius: 20px;
     display:flex;
     align-items: center;
     padding: 0 15px;
+    z-index: 1;
 }
 
 .search-box img {
     width: 14px;
-
 }
 
 .search-box input {
@@ -66,6 +68,25 @@ nav {
     padding: 10px;
     outline: none;
     border: 0;
+}
+
+.container1 {
+    position: absolute;
+    width: 95%;
+    list-style-type: none;
+}
+
+.viewprofile a {
+    color: white;
+    position: absolute;
+    left: 1245px;
+    top: 30px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.viewprofile a:hover{
+    text-decoration: underline;
 }
 
 .online{

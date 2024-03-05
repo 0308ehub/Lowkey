@@ -11,7 +11,7 @@
     --primary-color: #1e0044;
     --primary-color-light: #f6f5ff;
     --toggle-color: #DDD;
-    --text-color: 707070; 
+    --text-color: #707070; 
 
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -26,19 +26,47 @@ body{
     transition: var(--tran-04);
 }
 
-.image{
-    scale: 4.5;
-    position: relative;
-    right: 6px;
-    bottom: 5px;
+<!----------------------top-section----------------->
+
+.top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container (top) */
+    justify-content: flex-start; /* Justify content to the start of the flex container (left) */
 }
 
-header .text header-text{
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text-color);
+.image {
+    scale: .455;
 }
-    
+
+.image-text {
+    position: relative;
+    right: 212px;
+    bottom: 152px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.text {
+    position: relative;    
+    top: 3px;
+    right: 214px;
+    display: flex;
+    flex-direction: column; /* Align text vertically */
+    font-size: 16px; /* Adjust font size */
+}
+
+.name {
+    font-weight: 600;
+}
+
+.vision {
+    font-weight: 500;
+}
+
+<!----------------------navbar----------------->
 
 .navbar{
     position: relative;
