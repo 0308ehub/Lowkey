@@ -26,22 +26,11 @@ body{
     transition: var(--tran-04);
 }
 
-<!----------------------top-section----------------->
-
-.top-section {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: flex-start; /* Align items to the start of the flex container (top) */
-    justify-content: flex-start; /* Justify content to the start of the flex container (left) */
-}
-
-.image {
+.logoimage {
     scale: .455;
 }
 
-.image-text {
+.logogroup {
     position: relative;
     right: 212px;
     bottom: 152px;
@@ -49,7 +38,7 @@ body{
     align-items: center; /* Align items vertically */
 }
 
-.text {
+.logotext {
     position: relative;    
     top: 3px;
     right: 214px;
@@ -66,21 +55,49 @@ body{
     font-weight: 500;
 }
 
-<!----------------------navbar----------------->
+.header1 {
+    position: relative;
+    left: 175px;
+    bottom: 285px;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+}
+
+.search-box{
+    position: relative;
+    top: 10px;
+    left: 50px;
+    background: #efefef;
+    width: 500px;
+    border-radius: 20px;
+    display:flex;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 1;
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+}
 
 .navbar{
     position: relative;
-    left: 250px;
-    top: 150px;
+    bottom: 250px;
     height: 30px;
-    width: 50%;
+    width: 100%;
     background: var(--primary-color);
     transition: var(--tran-05);
     text-decoration: none;
     padding-right: 15px;
     padding-left: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
+
 .navdiv{
     display: flex;
     align-items: center;
@@ -90,27 +107,29 @@ body{
 .navbar li{
     list-style: none;
     display: inline-block;
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .navbar li a{
+    position: relative;
+    left: 100px;
     text-decoration: none;
     color: white;
-    font-size: 20px;
-    margin-right: 25px;
+    font-size: 16px;
     transition: var(--tran-02);
+    margin-right: 15px;
     padding-left: 5px;
     padding-right: 5px;
 }
 
 .navbar li a:hover{
-    border-bottom: 5px solid #CCC;
-    padding-bottom: 4px;
+    border-bottom: 3px solid #CCC;
+    padding-bottom: 2px;
 }
 
 .navbar li a.active{
-    border-bottom: 5px solid #CCC;
-    padding-bottom: 4px;
+    border-bottom: 3px solid #CCC;
+    padding-bottom: 2px;
 }
 
 .tab-content {
@@ -124,7 +143,7 @@ body{
 .tab-texts {
     position: relative;
     top: 175px; /* Adjust the distance from the navbar */
-    left: 150px;
+    left: 200px;
     transition: var(--tran-05);
 }
 

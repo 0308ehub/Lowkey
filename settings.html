@@ -37,53 +37,78 @@
     </script>
 </head>
 <body onload="checkAuthState()">
-    <nav class="top-section">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="./images/logo.png" alt="logo">
-                </span>
-                <div class="text header-text">
-                    <span class="name">Lowkey</span>
-                    <span class="vision">Your community</span>
-                </div>
-            </div>
-        </header>
-    </nav>
-    <div class="header-text">
-                <span class="name">User Settings</span>
-    </div>
+    <header>
+        <div class="logogroup">
+            <span class="logoimage">
+                <img src="./images/logo.png" alt="logo">
+            </span>
+        <div class="logotext">
+            <span class="name">Lowkey</span>
+            <span class="vision">Your community</span>
+        </div>
+        <div class="nav-right">
+        <li class="search-box">
+            <i class='bx bx-search icon' ></i>                            
+                <input type="text" placeholder="Search...">
+          </li>
+        </div>
+    </header>
+    <div class="header1">User Settings</div>
     <nav class="navbar">
         <div class="navdiv">
             <ul>
                 <li class="nav-link">
-                    <a href="#" class="tab active" id="posts-tab">
-                        <span class="text nav-text">Posts</span>
+                    <a href="#" class="tab active" id="account-tab">
+                        <span class="text nav-text">Account</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" class="tab" id="comments-tab">
-                        <span class="text nav-text">Comments</span>
+                    <a href="#" class="tab" id="profile-tab">
+                        <span class="text nav-text">Profile</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" class="tab" id="communities-tab">
-                        <span class="text nav-text">Communities</span>
+                    <a href="#" class="tab" id="safety&privacy-tab">
+                        <span class="text nav-text">Safety & Privacy</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" class="tab" id="status-tab">
-                        <span class="text nav-text">Status</span>
+                    <a href="#" class="tab" id="feed-tab">
+                        <span class="text nav-text">Feed Settings</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="tab" id="notifications-tab">
+                        <span class="text nav-text">Notifications</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="tab" id="emails-tab">
+                        <span class="text nav-text">Emails</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="tab" id="subscriptions-tab">
+                        <span class="text nav-text">Subscriptions</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="tab" id="chat&messaging-tab">
+                        <span class="text nav-text">Chat & Messaging</span>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="tab-texts">
-        <span class="tab-text active" data-tab="posts">View Posts</span>
-        <span class="tab-text" data-tab="comments">View Comments</span>
-        <span class="tab-text" data-tab="communities">Explore Communities</span>
-        <span class="tab-text" data-tab="status">Check Status</span>
+        <span class="tab-text active" data-tab="account">View Posts</span>
+        <span class="tab-text" data-tab="profile">View Comments</span>
+        <span class="tab-text" data-tab="safety&privacy">Explore Communities</span>
+        <span class="tab-text" data-tab="feed">Check Status</span>
+        <span class="tab-text active" data-tab="notifications">View Posts</span>
+        <span class="tab-text" data-tab="emails">View Comments</span>
+        <span class="tab-text" data-tab="subscriptions">Explore Communities</span>
+        <span class="tab-text" data-tab="chat&messaging">Check Status</span>
     </div>
     <script src="./src/settings.js"></script>
 </body>
