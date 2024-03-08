@@ -57,10 +57,10 @@ body{
 
 .header1 {
     position: relative;
-    left: 175px;
+    left: 130px;
     bottom: 285px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 17px;
     color: black;
 }
 
@@ -112,7 +112,7 @@ body{
 
 .navbar li a{
     position: relative;
-    left: 100px;
+    left: 50px;
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -142,8 +142,8 @@ body{
 
 .tab-texts {
     position: relative;
-    top: 175px; /* Adjust the distance from the navbar */
-    left: 200px;
+    bottom: 220px;
+    left: 120px;
     transition: var(--tran-05);
 }
 
@@ -158,10 +158,309 @@ body.dark .tab-text{
     display: none; /* Initially hide the text */
     padding: 5px 10px;
     border-radius: 5px;
-    color: #1e0044;
-    font-size: 16px;
 }
 
 .tab-text.active {
     display: inline-block; /* Show the text when associated tab is active */
+}
+
+.tab-header {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.tab-label1 {
+    width: 700px;
+    position: relative;
+    top: 40px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab-item1 {
+    position: relative;
+    top: 70px;
+}
+
+.tab-item1-content {
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.oval-button {
+    position: relative;
+    left: 610px;
+    bottom: 25px;
+    background-color: transparent;
+    border: 1px solid #3498db; /* Light blue border */
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 15px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+.oval-button:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
+}
+
+.tab-item2 {
+    position: relative;
+    top: 70px;
+}
+
+.tab-item2-content {
+    width: 550px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+#language-select1 {
+    position: relative;
+    left: 610px;
+    bottom: 50px;
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+  #language-select1 option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; /* background color */
+    color: black; /* text color */
+  }
+
+#language-select1:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
+}
+
+.tab-item3 {
+    position: relative;
+    top: 70px;
+}
+
+.tab-item3-content {
+    width: 550px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+#language-select2 {
+    position: relative;
+    left: 610px;
+    bottom: 30px;
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+  #language-select2 option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; /* background color */
+    color: black; /* text color */
+  }
+
+#language-select2:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
+}
+
+.tab-item4 {
+    position: relative;
+    top: 70px;
+}
+
+.tab-item4-content {
+    width: 550px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+#location-select {
+    position: relative;
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+  #location-select option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; /* background color */
+    color: black; /* text color */
+  }
+
+#location-select:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
+}
+
+.tab-label2 {
+    width: 700px;
+    position: relative;
+    top: 100px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab-item5 {
+    position: relative;
+    top: 150px;
+}
+
+.tab-item5-content {
+    width: 700px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.twitter-button {
+    width: 210px;
+    position: relative;
+    top: 20px;
+    left: 500px;
+    background-color: #2696d7; /* Set background color to blue */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Add padding */
+    font-size: 15px; /* Set font size */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 20px; /* Add border radius */
+}
+
+.twitter-button i {
+    scale: 1.2;
+    margin-right: 5px; /* Add spacing between icon and text */
+}
+
+.tab-item6 {
+    position: relative;
+    top: 200px;
+}
+
+.tab-item6-content {
+    width: 700px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.apple-button {
+    width: 210px;
+    position: relative;
+    bottom: 20px;
+    left: 500px;
+    background-color: black; /* Set background color to blue */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Add padding */
+    font-size: 15px; /* Set font size */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 20px; /* Add border radius */
+}
+
+.apple-button i {
+    scale: 1.2;
+    margin-right: 5px; /* Add spacing between icon and text */
+}
+
+.tab-item7 {
+    position: relative;
+    top: 200px;
+}
+
+.tab-item7-content {
+    width: 700px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.google-button {
+    width: 210px;
+    position: relative;
+    bottom: 20px;
+    left: 500px;
+    background-color: #4285F4; /* Set background color to blue */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Add padding */
+    font-size: 15px; /* Set font size */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 20px; /* Add border radius */
+}
+
+.google-button i {
+    scale: 1.2;
+    margin-right: 5px; /* Add spacing between icon and text */
+}
+
+.tab-label3 {
+    width: 700px;
+    position: relative;
+    top: 220px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.delete-button {
+    scale: .9;
+    width: 210px;
+    position: relative;
+    top: 250px;
+    left: 500px;
+    background-color: white; /* Set background color to blue */
+    color: red; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Add padding */
+    font-size: 15px; /* Set font size */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 20px; /* Add border radius */
+    padding-bottom: 50px;
+}
+
+.delete-button i {
+    scale: 1.2;
+    margin-right: 5px; /* Add spacing between icon and text */
 }

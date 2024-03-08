@@ -28,10 +28,15 @@
       // Function to check if a user is logged in or not
       function checkAuthState() {
         firebase.auth().onAuthStateChanged(function(user) {
-          if (!user) {
-            // User is not signed in, redirect to the login page
-            window.location.href = "login.html";
-          }
+            if (user) {
+                // User is signed in, update tab-item1-content with user's email
+                var userEmail = user.email;
+                var tabItem1Content = document.querySelector('.tab-item1-content');
+                tabItem1Content.textContent = userEmail;
+            } else {
+                // User is not signed in, redirect to the login page
+                window.location.href = "login.html";
+            }
         });
       }
     </script>
@@ -101,14 +106,101 @@
         </div>
     </nav>
     <div class="tab-texts">
-        <span class="tab-text active" data-tab="account">View Posts</span>
-        <span class="tab-text" data-tab="profile">View Comments</span>
-        <span class="tab-text" data-tab="safety&privacy">Explore Communities</span>
-        <span class="tab-text" data-tab="feed">Check Status</span>
-        <span class="tab-text active" data-tab="notifications">View Posts</span>
-        <span class="tab-text" data-tab="emails">View Comments</span>
-        <span class="tab-text" data-tab="subscriptions">Explore Communities</span>
-        <span class="tab-text" data-tab="chat&messaging">Check Status</span>
+        <div class="tab-text active" data-tab="account">
+            <div class="tab-header">Account Settings</div>
+            <div class="tab-label1">ACCOUNT PREFERENCES</div>
+            <div class="tab-item1">
+                Email address
+                <div class="tab-item1-content"></div>
+                <button class="oval-button">Change</button>
+            </div>
+            <div class="tab-item2">
+                Display language
+                <div class="tab-item2-content">Select the language you'd like to experience the Lowkey interface in. Note that this won't change the language of user-generated content and that this feature is still in development so translations and UI are still under review.</div>
+                <select id="language-select1">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="de">German</option>
+                    <!-- Add more languages as needed -->
+                  </select>
+            </div>
+            <div class="tab-item3">
+                Content languages
+                <div class="tab-item3-content">Add languages you’d like to see posts, community recommendations, and other content in.</div>
+                <select id="language-select2">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="de">German</option>
+                    <!-- Add more languages as needed -->
+                  </select>
+            </div>
+            <div class="tab-item4">
+                Location Customization
+                <div class="tab-item4-content">Specify a location to customize your recommendations and feed. Lowkey does not track your precise geolocation data. </div>
+                <select id="location-select">
+                    <option value="ip">Use approximate location (based on IP)</option>
+                    <option value="no">No location specified</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="es">Spain</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+            <div class="tab-label2">CONNECTED ACCOUNTS</div>
+            <div class="tab-item5">
+                Connect to Twitter
+                <div class="tab-item5-content">Connect a Twitter account to enable the choice to tweet your new posts and display a link on your profile. We will never post to Twitter without your permission.</div>
+                <button class="twitter-button">
+                    <i class='bx bxl-twitter'></i> Connect to Twitter
+                </button>
+            </div>
+            <div class="tab-item6">
+                Connect to Apple
+                <div class="tab-item6-content">Connect account to log in to Lowkey with Apple</div>
+                <button class="apple-button">
+                    <i class='bx bxl-apple' ></i> Connect to Apple
+                </button>
+            </div>
+            <div class="tab-item7">
+                Connect to Google
+                <div class="tab-item7-content">Connect account to log in to Lowkey with Google</div>
+                <button class="google-button">
+                    <i class='bx bxl-google' ></i> Connect to Google
+                </button>
+            </div>
+            <div class="tab-label3">DELETE ACCOUNT</div>
+            <button class="delete-button">
+                <i class='bx bxs-trash' ></i> DELETE ACCOUNT
+            </button>
+        </div>
+        <div class="tab-text" data-tab="profile">
+            <div class="tab-header">Customize profile</div>
+        </div>
+        <div class="tab-text" data-tab="safety&privacy">
+            <span class="tab-header">Safety & Privacy</span>
+        </div>
+        <div class="tab-text" data-tab="feed">
+            <span class="tab-header">Feed Settings</span>
+        </div>
+        <div class="tab-text" data-tab="notifications">
+            <span class="tab-header">Notification Settings</span>
+        </div>
+        <div class="tab-text" data-tab="emails">
+            <span class="tab-header">Manage Emails</span>
+        </div>
+        <div class="tab-text" data-tab="subscriptions">
+            <span class="tab-header">Lowkey Premium</span>
+        </div>
+        <div class="tab-text" data-tab="chat&messaging">
+            <span class="tab-header">Chat & Messaging</span>
+        </div>
+        
     </div>
     <script src="./src/settings.js"></script>
 </body>
