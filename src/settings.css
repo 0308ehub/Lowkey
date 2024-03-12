@@ -1085,7 +1085,7 @@ body.dark .tab-text{
 .markasread-button {
     position: relative;
     left: 570px;
-    bottom: 30px;
+    bottom: 35px;
     background-color: transparent;
     border: 1px solid #3498db; /* Light blue border */
     border-radius: 50px; /* Half of the button height for an oval shape */
