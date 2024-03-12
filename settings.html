@@ -54,8 +54,8 @@
         <div class="nav-right">
         <li class="search-box">
             <i class='bx bx-search icon' ></i>                            
-                <input type="text" placeholder="Search...">
-          </li>
+                <input type="text" id="search-input" placeholder="Search...">
+            </li>
         </div>
     </header>
     <div class="header1">User Settings</div>
@@ -181,24 +181,385 @@
         </div>
         <div class="tab-text" data-tab="profile">
             <div class="tab-header">Customize profile</div>
+            <div class="tab-label1">PROFILE INFORMATION</div>
+            <div class="tab1-item1">
+                Display name (optional)
+                <div class="tab1-item1-content">Set a display name. This does not change your username.</div>
+                <div class="input-container">
+                    <input type="text" id="display-name" placeholder="Display name (optional)">
+                    <div id="char-counter">30 Characters remaining</div>
+                </div>
+            </div>
+            <div class="tab1-item2">
+                About (optional)
+                <div class="tab1-item2-content">A brief description of yourself shown on your profile.</div>
+                <div class="input-container1">
+                    <input type="text" id="about-content" placeholder="About (optional)">
+                    <div id="char-counter1">200 Characters remaining</div>
+                </div>
+            </div> 
+            <div class="tab1-item3">
+                Social Links (5 max)
+                <div class="tab1-item3-content">People who visit your profile will see your social links.</div>
+                <button class="social-button">
+                    <i class='bx bx-plus'></i> Add social link
+                </button>
+            </div>
+            <div class="tab1-label2">ADVANCED</div>
+            <div class="tab1-item4">
+                Allow people to add you
+                <div class="tab1-item4-content">Followers will be notified about posts you make to your profile and see them in their home feed.</div>
+                <div class="toggle-switch" id="toggleSwitch">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab1-item4">
+                Content visibility
+                <div class="tab1-item4-content">Posts to this profile can appear in all communities and your profile can be discovered in all users</div>
+                <div class="toggle-switch" id="toggleSwitch1">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab1-item4">
+                Active in communities visibility
+                <div class="tab1-item4-content">Show which communities I am active in on my profile.</div>
+                <div class="toggle-switch" id="toggleSwitch2">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab1-item5">
+                Clear history
+                <div class="tab1-item5-content">Delete your post views history.</div>
+                <button class="clearhistory-button">Clear history</button>
+            </div>
         </div>
         <div class="tab-text" data-tab="safety&privacy">
-            <span class="tab-header">Safety & Privacy</span>
+            <div class="tab-header">Safety & Privacy</div>
+            <div class="tab-subheader">Manage how we use data to personalize your Lowkey experience, and control how other users interact with you. To learn more, visit our <a href="#">Privacy & Security FAQs</a>.</div>
+            <div class="tab2-label1">SAFETY</div>
+            <div class="tab2-item1">
+                People You’ve Blocked
+                <div class="tab2-item2-content">Blocked people can’t send you chat requests or private messages.</div>
+            </div>
+            <div class="tab2-item2">
+                Communities You've Muted
+                <div class="tab2-item2-content">Posts from muted communities won't show up in your feeds or recommendations.</div>
+            </div>
+            <div class="tab2-label2">PRIVACY</div>
+            <div class="tab2-item3">
+                Show up in search results
+                <div class="tab1-item4-content">Allow search engines like Google to link to your profile in their search results.</div>
+                <div class="toggle-switch" id="toggleSwitch3">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab2-item3">
+                Personalize ads on Reddit based on information and activity from our partners.
+                <div class="tab1-item4-content">Allow us to use information from our partners to show you better ads on Lowkey.</div>
+                <div class="toggle-switch" id="toggleSwitch4">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab2-label3">SENSITIVE ADVERTISING CATEGORIES</div>
+            <div class="tab-subheader1">You can limit ads about these topics. We’ll do our best not to show them to you when you are signed into your Lowkey account.</div>
+            <div class="tab2-item4">
+                Alcohol
+                <div class="tab1-item4-content">Limited by you</div>
+                <div class="toggle-switch" id="toggleSwitch5">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab2-item4">
+                Dating
+                <div class="tab1-item4-content">Limited by you</div>
+                <div class="toggle-switch" id="toggleSwitch6">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab2-item4">
+                Gambling
+                <div class="tab1-item4-content">Limited by you</div>
+                <div class="toggle-switch" id="toggleSwitch7">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab2-item4">
+                Pregnancy and parenting
+                <div class="tab1-item4-content">Limited by you</div>
+                <div class="toggle-switch" id="toggleSwitch8">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab2-item4">
+                Weight loss
+                <div class="tab1-item4-content">Limited by you</div>
+                <div class="toggle-switch" id="toggleSwitch9">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab2-label4">ADVANCED SECURITY</div>
+            <div class="tab2-item5">
+                Use two-factor authentication
+                <div class="tab2-item5-content">Help protect your account (even if someone gets your password) by requiring a verification code and a password to log in.</div>
+                <div class="toggle-switch" id="toggleSwitch10">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
         </div>
         <div class="tab-text" data-tab="feed">
-            <span class="tab-header">Feed Settings</span>
+            <div class="tab-header">Feed Settings</div>
+            <div class="tab-label1">CONTENT PREFERENCES</div>
+            <div class="tab3-item1">
+                Show mature (18+) content
+                <div class="tab3-item1-content">See NSFW (Not Safe for Work) mature and adult images, videos, written content, and other media in your Reddit feeds and search results.</div>
+                <div class="toggle-switch" id="toggleSwitch11">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab3-item1">
+                Blur mature images and media
+                <div class="tab3-item1-content">Blur previews and thumbnails for any images or videos tagged as NSFW (Not Safe for Work).</div>
+                <div class="toggle-switch" id="toggleSwitch12">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab3-item1">
+                Enable home feed recommendations
+                <div class="tab3-item1-content">Allow us to introduce recommended posts in your home feed.</div>
+                <div class="toggle-switch" id="toggleSwitch13">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab3-item1">
+                Autoplay media
+                <div class="tab3-item1-content">Play videos and gifs automatically when in the viewport.</div>
+                <div class="toggle-switch" id="toggleSwitch14">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab3-item1">
+                Reduce Animations
+                <div class="tab3-item1-content">Reduce animations on posts, comments, and feeds.</div>
+                <div class="toggle-switch" id="toggleSwitch15">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab3-item1">
+                Community themes
+                <div class="tab3-item1-content">Use custom themes for all communities. You can also turn this off on a per community basis.</div>
+                <div class="toggle-switch" id="toggleSwitch16">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab3-item1">
+                Open posts in new tab
+                <div class="tab3-item1-content">Enable to always open posts in a new tab.</div>
+                <div class="toggle-switch" id="toggleSwitch17">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
         </div>
         <div class="tab-text" data-tab="notifications">
-            <span class="tab-header">Notification Settings</span>
+            <div class="tab-header">Notification Settings</div>
+            <div class="tab-label1">MESSAGES</div>
+            <div class="tab4-item1">
+                Private Messages
+                <div class="toggle-switch" id="toggleSwitch18">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item1">
+                Chat Messages
+                <div class="toggle-switch" id="toggleSwitch19">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item1">
+                Chat Requests
+                <div class="toggle-switch" id="toggleSwitch20">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-label2">ACTIVITY</div>
+            <div class="tab4-item2">
+                Mentions of username
+                <div class="toggle-switch" id="toggleSwitch21">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item2">
+                Comments on your posts
+                <div class="toggle-switch" id="toggleSwitch22">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item2">
+                Likes on your posts
+                <div class="toggle-switch" id="toggleSwitch23">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item2">
+                Likes on your comments
+                <div class="toggle-switch" id="toggleSwitch24">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item2">
+                Replies to your comments
+                <div class="toggle-switch" id="toggleSwitch25">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item2">
+                Activity on your comments
+                <div class="toggle-switch" id="toggleSwitch26">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item2">
+                Activity on chat posts you're in
+                <div class="toggle-switch" id="toggleSwitch27">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item2">
+                New friends
+                <div class="toggle-switch" id="toggleSwitch28">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-label3">RECOMMENDATIONS</div>
+            <div class="tab4-item3">
+                Trending posts
+                <div class="toggle-switch" id="toggleSwitch29">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item3">
+                Community recommendations
+                <div class="toggle-switch" id="toggleSwitch30">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-item3">
+                Featured content
+                <div class="toggle-switch" id="toggleSwitch31">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab4-label4">MODERATION</div>
+            <div class="tab4-item4">
+                Mod notifications
+                <div class="toggle-switch" id="toggleSwitch32">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
         </div>
         <div class="tab-text" data-tab="emails">
-            <span class="tab-header">Manage Emails</span>
+            <div class="tab-header">Manage Emails</div>
+            <div class="tab-label1">MESSAGES</div>
+            <div class="tab5-item1">
+                Private Messages
+                <div class="toggle-switch" id="toggleSwitch33">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-item1">
+                Chat Requests
+                <div class="toggle-switch" id="toggleSwitch34">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-label2">ACTIVITY</div>
+            <div class="tab5-item2">
+                Mentions of username
+                <div class="toggle-switch" id="toggleSwitch35">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-item2">
+                Comments on your posts
+                <div class="toggle-switch" id="toggleSwitch36">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-item2">
+                Likes on your posts
+                <div class="toggle-switch" id="toggleSwitch37">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-item2">
+                Likes on your comments
+                <div class="toggle-switch" id="toggleSwitch38">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-item2">
+                Replies to your comments
+                <div class="toggle-switch" id="toggleSwitch39">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-item2">
+                New friends
+                <div class="toggle-switch" id="toggleSwitch40">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-label3">NEWSLETTERS</div>
+            <div class="tab5-item3">
+                Daily Digest
+                <div class="toggle-switch" id="toggleSwitch41">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
+            <div class="tab5-label4"></div>
+            <div class="tab5-item4">
+                Unsubscribe from all emails
+                <div class="toggle-switch" id="toggleSwitch42">
+                    <span class="switch" id="toggleButton"></span>
+                </div>
+            </div>
         </div>
         <div class="tab-text" data-tab="subscriptions">
-            <span class="tab-header">Lowkey Premium</span>
+            <div class="tab-header">Lowkey Premium</div>
+            <div class="tab-subheader">Lowkey Premium is a subscription membership that upgrades your account with extra AI features.</div>
+            <div class="tab2-label1">SUBSCRIPTION STATUS</div>
+            <div class="tab6-item1-content">Get Lowkey Premium and help support Lowkey.</div>
+            <div class="button-container">
+                <button class="premium-button">
+                    Get Premium <i class='bx bx-link-external'></i>
+                </button>
+                <button class="premium1-button">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </button>
+            </div>
         </div>
         <div class="tab-text" data-tab="chat&messaging">
-            <span class="tab-header">Chat & Messaging</span>
+            <div class="tab-header">Chat & Messaging</div>
+            <div class="tab7-item1">
+                Who can send you chat requests
+                <select id="people-select">
+                    <option value="ev">Everyone</option>
+                    <option value="ac">Accounts Older Than 30 Days</option>
+                    <option value="nb">Nobody</option>
+                </select>
+            </div>
+            <div class="tab7-item2">
+                Who can send you private messages
+                <div class="tab7-item2-content">Lowkey admins and moderators of communities you’ve joined can message you even if they’re not approved.</div>
+                <select id="people-select1">
+                    <option value="ev">Everyone</option>
+                    <option value="nb">Nobody</option>
+                </select>
+            </div>
+            <div class="tab7-item3">
+                Mark all as read
+                <div class="tab7-item3-content">Mark all conversations and invites as read.</div>
+                <button class="markasread-button">Mark as Read</button>
+            </div>
         </div>
         
     </div>

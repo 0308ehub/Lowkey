@@ -21,6 +21,7 @@
 }
 
 body{
+    width: 100%;
     height: 100vh;
     background: var(--sidebar-color);
     transition: var(--tran-04);
@@ -56,6 +57,7 @@ body{
 }
 
 .header1 {
+    width: 1200px;
     position: relative;
     left: 130px;
     bottom: 285px;
@@ -77,7 +79,7 @@ body{
     z-index: 1;
 }
 
-.search-box input {
+#search-input {
     width: 100%;
     background: transparent;
     padding: 10px;
@@ -141,6 +143,7 @@ body{
 }
 
 .tab-texts {
+    width: 1200px;
     position: relative;
     bottom: 220px;
     left: 120px;
@@ -463,4 +466,637 @@ body.dark .tab-text{
 .delete-button i {
     scale: 1.2;
     margin-right: 5px; /* Add spacing between icon and text */
+}
+
+.tab1-item1 {
+    position: relative;
+    top: 70px;
+}
+
+.tab1-item1-content {
+    width: 700px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.input-container {
+    position: relative;
+    right: 20px;
+    bottom: 5px;
+    margin: 20px;
+  }
+  
+  input[type="text"] {
+    width: 700px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: black;
+  }
+  
+  /* Style the placeholder text */
+  input[type="text"]::placeholder {
+    color: #999; /* Placeholder color */
+  }
+
+
+#char-counter {
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab1-item2 {
+    position: relative;
+    top: 70px;
+}
+
+.tab1-item2-content {
+    width: 700px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.input-container1 {
+    position: relative;
+    right: 20px;
+    bottom: 5px;
+    margin: 20px;
+  }
+  
+  #about-content {
+    width: 700px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: black;
+}
+  
+  /* Style the placeholder text */
+  input[type="text"]::placeholder {
+    color: #999; /* Placeholder color */
+  }
+
+
+#char-counter1 {
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab1-item3 {
+    position: relative;
+    top: 70px;
+}
+
+.tab1-item3-content {
+    width: 700px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.social-button {
+    width: 150px;
+    position: relative;
+    top: 20px;
+    height: 40px;
+    background-color: rgb(239, 237, 237); /* Set background color to blue */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Add padding */
+    font-size: 13px; /* Set font size */
+    font-weight: 500;
+    color: black;
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 20px; /* Add border radius */
+}
+
+.social-button i {
+    scale: 2;
+}
+
+.tab1-label2 {
+    width: 700px;
+    position: relative;
+    top: 120px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab1-item4 {
+    position: relative;
+    top: 150px;
+}
+
+.tab1-item4-content {
+    width: 700px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.toggle-switch {
+    position: relative;
+    bottom: 25px;
+    left: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: var(--tran-05);
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background: var(--toggle-color);
+    transition: var(--tran-05);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+.toggle-switch.blue .switch {
+    background: rgb(73, 161, 224); /* Change to lightblue color */
+}
+
+.toggle-switch.blue .switch::before {
+    left: 24px; /* Move the circle to the right */
+}
+
+.tab1-item5 {
+    position: relative;
+    top: 150px;
+}
+
+.tab1-item5-content {
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.clearhistory-button {
+    position: relative;
+    left: 580px;
+    bottom: 30px;
+    background-color: transparent;
+    border: 1px solid #3498db; /* Light blue border */
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 15px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+.clearhistory-button:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
+}
+
+.tab-subheader {
+    position: relative;
+    top: 30px;
+    width: 650px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab-subheader a {
+    color: rgb(37, 140, 191); /* Set the color of the link text to blue */
+    text-decoration: none; /* Add an underline to the link text */
+    /* Add any additional styles as needed */
+}
+
+.tab2-label1 {
+    width: 700px;
+    position: relative;
+    top: 70px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab2-item1 {
+    position: relative;
+    top: 110px;
+}
+
+.tab2-item1-content {
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab2-item2 {
+    position: relative;
+    top: 140px;
+}
+
+.tab2-item2-content {
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab2-label2 {
+    width: 700px;
+    position: relative;
+    top: 180px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab2-item3 {
+    position: relative;
+    top: 210px;
+}
+
+.tab2-label3 {
+    width: 700px;
+    position: relative;
+    top: 230px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab-subheader1 {
+    position: relative;
+    width: 550px;
+    top: 250px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab2-item4 {
+    position: relative;
+    top: 280px;
+}
+
+.tab2-label4 {
+    width: 700px;
+    position: relative;
+    top: 290px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab2-item5 {
+    position: relative;
+    top: 320px;
+}
+
+.tab2-item5-content {
+    width: 550px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab3-item1 {
+    position: relative;
+    top: 70px;
+}
+
+.tab3-item1-content {
+    width: 550px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.tab4-item1 {
+    position: relative;
+    top: 70px;
+    margin-bottom: 10px;
+}
+
+.tab4-label2 {
+    width: 700px;
+    position: relative;
+    top: 80px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab4-item2 {
+    position: relative;
+    top: 120px;
+    margin-bottom: 10px;
+}
+
+.tab4-label3 {
+    width: 700px;
+    position: relative;
+    top: 130px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab4-item3 {
+    position: relative;
+    top: 160px;
+    margin-bottom: 10px;
+}
+
+.tab4-label4 {
+    width: 700px;
+    position: relative;
+    top: 160px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab4-item4 {
+    position: relative;
+    top: 190px;
+    margin-bottom: 10px;
+}
+
+.tab5-item1 {
+    position: relative;
+    top: 70px;
+    margin-bottom: 10px;
+}
+
+.tab5-label2 {
+    width: 700px;
+    position: relative;
+    top: 90px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab5-item2 {
+    position: relative;
+    top: 130px;
+    margin-bottom: 10px;
+}
+
+.tab5-label3 {
+    width: 700px;
+    position: relative;
+    top: 140px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab5-item3 {
+    position: relative;
+    top: 170px;
+    margin-bottom: 10px;
+}
+
+.tab5-label4 {
+    width: 700px;
+    position: relative;
+    top: 200px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(123, 120, 120);
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+}
+
+.tab5-item4 {
+    position: relative;
+    top: 230px;
+    margin-bottom: 10px;
+}
+
+.tab6-item1-content {
+    position: relative;
+    top: 100px;
+    width: 550px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.premium-button {
+    scale: .9;
+    width: 210px;
+    position: relative;
+    right: 45px;
+    top: 140px;
+    background-color: white; /* Set background color to blue */
+    color: #4285F4; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Add padding */
+    font-size: 17px; /* Set font size */
+    font-weight: 500;
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 20px; /* Add border radius */
+    padding-bottom: 50px;
+}
+
+.premium-button i {
+    scale: 1.2;
+    margin-left: 5px; /* Add spacing between icon and text */
+}
+
+.premium1-button {
+    position: relative;
+    left: 445px;
+    top: 140px;
+    background-color: white; /* Set background color to blue */
+    color: #4285F4; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 5px 20px; /* Add padding */
+    font-size: 17px; /* Set font size */
+    font-weight: 400;
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 20px; /* Add border radius */
+}
+
+.premium1-button i {
+    scale: 1.8;
+    margin-left: 5px; /* Add spacing between icon and text */
+}
+
+.tab7-item1 {
+    position: relative;
+    top: 40px;
+}
+
+#people-select {
+    width: 110px;
+    position: relative;
+    left: 340px;
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+  #people-select option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; /* background color */
+    color: black; /* text color */
+  }
+
+#people-select:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
+}
+
+#people-select.ac {
+    width: 250px; /* Adjust width as needed */
+    position: relative;
+    left: 200px;
+}
+
+#people-select.nb {
+    width: 100px; /* Adjust width as needed */
+    position: relative;
+    left: 350px;
+}
+
+.tab7-item2 {
+    position: relative;
+    top: 70px;
+}
+
+.tab7-item2-content {
+    width: 550px;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+#people-select1 {
+    width: 110px;
+    position: relative;
+    bottom: 55px;
+    left: 592.5px;
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+  #people-select1 option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; /* background color */
+    color: black; /* text color */
+  }
+
+#people-select1:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
+}
+
+#people-select1.nb {
+    width: 100px; /* Adjust width as needed */
+    position: relative;
+    left: 602.5px;
+}
+
+.tab7-item3 {
+    position: relative;
+    top: 70px;
+}
+
+.tab7-item3-content {
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #707070;
+}
+
+.markasread-button {
+    position: relative;
+    left: 570px;
+    bottom: 30px;
+    background-color: transparent;
+    border: 1px solid #3498db; /* Light blue border */
+    border-radius: 50px; /* Half of the button height for an oval shape */
+    color: #3498db; /* Light blue text color */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 15px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+  }
+
+.markasread-button:hover {
+    background-color: rgb(245, 243, 243); /* Change to light blue on hover */
 }
